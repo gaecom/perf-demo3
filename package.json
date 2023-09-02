@@ -1,0 +1,8 @@
+{
+  "name": "perf-demo3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gaecom/perf-demo3.git",
+  "author": "zhanrj <zhanrj@glodon.com>",
+  "license": "MIT"
+}
