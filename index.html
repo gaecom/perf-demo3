@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>html5</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="benchUtil.js"></script>
+    </head>
+    <body>
+   
+
+<style>
+  .svg {
+    transform-origin: 50% 50%;
+    animation: rotate 0.2s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+  }
+</style>
+
+
+<svg width="200" height="200">
+    <rect class="svg" width="100" height="100" fill="blue" />
+  </svg>
+  
+        性能调优例子
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="mem"></div>
+        <div id="layout">layout</div>
+        <div id="style">style</div>
+        <div id="node">node</div>
+        <div id="frame">frame</div>
+        <div id="anim"></div>
+        <div id="gpu">gpu</div>
+        <canvas id="canvas"></canvas>
+        <button id="addMem">add mem</button>
+        <button id="testUnRemoveEventListener" onclick="testUnRemoveEventListener()">UnRemoveEventListener</button>
+
+        <button id="detach node" onclick="detachNode()">detachDocumentNode</button>
+        <script>
+
+            setInterval(()=>{
+              //  incrWorker()
+               // incrCanvas()
+                //incrSvg()
+               // incrGpu()
+               // incMem()
+            //    incrCpu()
+            //    incrLayout()
+               // incrIndexDb(db,10)
+            //    incrSpan(Math.random().toString(19),document.querySelector("#node"))
+            },500)
+            
+            document.querySelector('#addMem').addEventListener('click',doIncMem2,false);
+        </script>
+    </body>
+</html>
